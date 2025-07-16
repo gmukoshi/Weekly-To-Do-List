@@ -4,7 +4,8 @@ body {
     text-align:center;
     background-color: aquamarine;
     font-size: x-large;
-  }
+    
+}
   #weekly-overview {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
