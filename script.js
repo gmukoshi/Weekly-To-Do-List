@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function(){
   console.log("page fully loaded");document.addEventListener
   const API_URL = "http://localhost:3000/activities";
-  renderWeekOverview();
+  renderWeeklyOverview();
   fetchTasks();
 
   document.getElementById("acitivity-form").addEventListener("submit", handleAddActivity);
 
 
-function renderWeekOverview() {
+function renderWeeklyOverview() {
   const weeklyOverview = document.getElementById("week-view");
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   weekView.innerHTML = "";
@@ -78,7 +78,7 @@ function toggleComplete(id, currentStatus) {
     .then(res => res.json())
     .then(() => {
       // Reload tasks
-      renderWeekOverview();
+      renderWeeklyOverview();
       fetchActivity();
     });
 }
@@ -86,7 +86,7 @@ function toggleComplete(id, currentStatus) {
 function deleteActivity(id) {
   fetch(`${API_URL}/${id}`, { method: "DELETE" })
     .then(() => {
-      renderWeekOverview();
+      renderWeeklyOverview();
       fetchActivity();
     });
 }
