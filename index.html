@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Document</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Weekly-To-Do-List</h1> <!--header-->
+        <!--taskform to key in your task-->
+        <form id ="activity">
+            <input type="text" id="activity" placeholder="Please fill in activity" required />
+            <!--optional day selection on drop-down & add activity-->
+    <select id="task-day">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+
+    <button type="submit">Add activity</button><!--adds activity to the selected day-->
+
+        </form>
+     <div>         
+        <script src="script.js"></script>
+    </div> 
+    </body>
+</html>
