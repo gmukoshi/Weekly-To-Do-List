@@ -1,10 +1,11 @@
 body {
-    font-family: 'Courier New', Courier, 
-    padding: 20px;
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding:50px;
+    text-align:center;
     background-color: aquamarine;
+    font-size: x-large;
   }
-  #week-view {
+  #weekly-overview {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
@@ -14,7 +15,7 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
   }
-  .task {
+  .activity {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
