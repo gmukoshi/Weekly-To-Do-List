@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Weekly-To-Do-List</h1> <!--header-->
-        <!--taskform to key in your task-->
-        <form id ="activity">
-            <input type="text" id="activity" placeholder="Please fill in activity" required />
+        <h1>Weekly-To-Do-List</h1> <!--App header-->
+        <!--Activityform to key in your activity-->
+        <form id ="activity-form">
+            <input type="text" id="activity-title" placeholder="Please fill in activity"required />
             <!--optional day selection on drop-down & add activity-->
-    <select id="task-day">
+    <select id="activity-day">
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
       <option value="Wednesday">Wednesday</option>
@@ -27,8 +27,10 @@
     <button type="submit">Add activity</button><!--adds activity to the selected day-->
 
         </form>
+
      <div>         
         <script src="script.js"></script>
     </div> 
+
     </body>
 </html>
