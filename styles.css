@@ -1,0 +1,26 @@
+body {
+    font-family: 'Courier New', Courier, 
+    padding: 20px;
+    text-align: center;
+    background-color: aquamarine;
+  }
+  #week-view {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .day-column {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .task {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
