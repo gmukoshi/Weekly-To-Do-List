@@ -11,6 +11,12 @@
       "text": "singing",
       "day": "Thursday",
       "completed": false
+    },
+    {
+      "id": "358e",
+      "text": "jogging",
+      "day": "Wednesday",
+      "completed": false
     }
   ]
 }

@@ -8,14 +8,21 @@ body {
 }
   #weekly-overview {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
     gap: 10px;
     margin-top: 20px;
+    text-align: left;;
   }
-  .day-column {
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
+  .day {
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 100px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  .day h2 {
+      font-size: 16px;
+      margin: 0 0 10px;
+      
   .activity {
     display: flex;
     justify-content: space-between;
