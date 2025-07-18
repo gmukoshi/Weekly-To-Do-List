@@ -10,11 +10,11 @@
     </head>
     <body>
         <h1 style=" color: chocolate;font-size: 36px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-style: oblique;">Weekly-To-Do-List</h1> <!--App header with inline styling-->
-        <!--Activity form to key in your activity-->
-        <form id ="activity-form">
-            <input type="text" id="activity-title" placeholder="Please fill in activity"required />
+        <!--task form to key in your task-->
+        <div class ="input-area">
+            <input type="text" id="taskInput" placeholder="Please fill in task"required />
             <!--seletion of optional day on drop-down-->
-    <select id="activity-day">
+    <select id="daySelect">
       <option value="Monday">Monday</option>
       <option value="Tuesday">Tuesday</option>
       <option value="Wednesday">Wednesday</option>
@@ -23,10 +23,19 @@
       <option value="Saturday">Saturday</option>
       <option value="Sunday">Sunday</option>
     </select>
-    <button type="submit">Add activity</button><!--adds activity to the selected day-->
-        </form>
-        <div = "weekly-overview">
-            <!--days of the week to be dynamically filled with activity-->
+    <div>
+        <ul id="Monday-list"></ul>
+        <ul id="Tuesday-list"></ul>
+        <ul id="Wednesday-list"></ul>
+        <ul id="Thursday-list"></ul>
+        <ul id="Friday-list"></ul>
+        <ul id="Saturday-list"></ul>
+        <ul id="Sunday-list"></ul>
+    </div>
+    <button onclick="addActivity()">Add task</button>
+        </div>
+        <div class ="week" id="week"></div>
+            <!--days of the week to be dynamically filled with task-->
         </div>
      <div>         
         <script src="script.js"></script>

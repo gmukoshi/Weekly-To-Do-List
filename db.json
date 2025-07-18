@@ -1,4 +1,16 @@
 {
-    "activities": []
-  }
-  
+  "tasks": [
+    {
+      "id": "18a0",
+      "text": "praying",
+      "day": "Tuesday",
+      "completed": false
+    },
+    {
+      "id": "cd05",
+      "text": "singing",
+      "day": "Thursday",
+      "completed": false
+    }
+  ]
+}
