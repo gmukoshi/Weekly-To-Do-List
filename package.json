@@ -1,0 +1,10 @@
+{
+  "name": "weekly-to-do-list",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodeserver.js"
+  },
+  "dependencies": {
+    "json-server": "0.17.3"
+  }
+}
