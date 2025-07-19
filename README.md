@@ -2,10 +2,9 @@
 
 ## Project Description
 
-**Introduction**
+## Introduction
 
 A weekly To-do list is a collection of tasks or activities that need to be completed ,in most cases written down.
-
 In this mini project ,we have come up with a To-do list App that is dynamic and asssist in achieving the below:
 
 - Create Tasks i.e coming up with tasks and assigning it to specific days.
