@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', ()=> {
   const apiUrl = 'http://localhost:3000/tasks';
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const weekDiv = document.getElementById('week');
@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
     weekDiv.appendChild(dayDiv);
   });
 
-  // Handle Add Activity button
+  // Handle Add Activity button  
   window.addActivity = function () {
     const text = taskInput.value.trim();
     const day = daySelect.value;
-
+      
     if (text === '') {
       alert("Please enter an activity.");
       return;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   };
 
-  // ⌨️ Add support for Enter key
+  // Add support for Enter key
   taskInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       e.preventDefault(); // prevent form-like behavior
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Render a task into the appropriate day's list
   function renderTask(task) {
     const list = document.getElementById(`${task.day}-list`);
-        if (!list) return;
+            if (!list) return;
 
     const li = document.createElement('li');
     if (task.completed) li.classList.add('completed');
@@ -101,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
     li.appendChild(deleteBtn);
     list.appendChild(li);
   }
-
   // Initial load
   fetchTasks();
 });

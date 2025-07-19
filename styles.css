@@ -1,14 +1,14 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     padding:50px;
-    text-align:center;
+    text-align: left;
     background-color: aquamarine;
     font-size: x-large;
     
 }
   #weekly-overview {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 20px;
     text-align: left;;
@@ -22,14 +22,13 @@ body {
   .day h2 {
       font-size: 16px;
       margin: 0 0 10px;
-      
+  }      
   .activity {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
   }
-  .completed {
+  .completed{
     text-decoration: line-through;
     color: gray;
   }
-  

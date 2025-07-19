@@ -1,21 +1,45 @@
 {
   "tasks": [
     {
-      "id": "18a0",
-      "text": "praying",
-      "day": "Tuesday",
+      "id": "7be1",
+      "text": "Going to Church",
+      "day": "Sunday",
       "completed": false
     },
     {
-      "id": "cd05",
-      "text": "singing",
+      "id": "5fcf",
+      "text": "Going out with family",
+      "day": "Saturday",
+      "completed": false
+    },
+    {
+      "id": "9738",
+      "text": "Winding up weekly report",
+      "day": "Friday",
+      "completed": false
+    },
+    {
+      "id": "af10",
+      "text": "Quality family time",
       "day": "Thursday",
       "completed": false
     },
     {
-      "id": "358e",
-      "text": "jogging",
+      "id": "17ea",
+      "text": "Joining Small Christian community for prayers",
       "day": "Wednesday",
+      "completed": false
+    },
+    {
+      "id": "910a",
+      "text": "Business meetings",
+      "day": "Tuesday",
+      "completed": false
+    },
+    {
+      "id": "bde2",
+      "text": "Doing House chores",
+      "day": "Monday",
       "completed": false
     }
   ]
