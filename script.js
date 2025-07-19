@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
   // Render a task into the appropriate day's list
   function renderTask(task) {
     const list = document.getElementById(`${task.day}-list`);
-            if (!list) return;
+        if (!list) return;
 
     const li = document.createElement('li');
     if (task.completed) li.classList.add('completed');
