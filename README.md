@@ -1,4 +1,4 @@
-# WeeklY To-do list App
+# Weekly To-Do List App
 
 ## Project Description
 
