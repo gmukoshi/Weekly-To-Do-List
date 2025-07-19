@@ -4,7 +4,7 @@
       "id": "7be1",
       "text": "Going to Church",
       "day": "Sunday",
-      "completed": false
+      "completed": true
     },
     {
       "id": "5fcf",
@@ -16,7 +16,7 @@
       "id": "9738",
       "text": "Winding up weekly report",
       "day": "Friday",
-      "completed": false
+      "completed": true
     },
     {
       "id": "af10",
