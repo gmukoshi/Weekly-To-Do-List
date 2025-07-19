@@ -23,21 +23,23 @@ In this mini project ,we have come up with a To-do list App that is dynamic and 
 3. Run the project ( use code . to access VS code)
 
 ## Usage
-- A program to determine the basic ingredients(plus quantity) needed to make a specific number of cups of Kenyan chai.
-- Program to estimate the fare for a boda boda ride over a distance.
-- A program for simplified estimator for mobile money transaction fees.
+- A program that helps one to improve Focus and Clarity through better organization of his day.
+- Program that Boosts Productivity ,since one is able to handle one task at a time .
+- A program that Builds Accountability,since one is able to determine if he completed a task or not.
 
 ## Features
-- Implementing Javascript basics.
+- Implementing HTML,CSS-styling
+-Impelementing Javascript basics,recognizing of events,Manipulating of the DOM and commmunicating with the server.
 
 ## Technologies Used
 
-- HTML
+-HTML
 -CSS
 -Javascript
 
 ## License
 - This project is licensed under the MIT License.
+
 ## Author
 - George Imbiakha Mukoshi
 
