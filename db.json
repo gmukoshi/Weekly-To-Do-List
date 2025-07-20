@@ -10,13 +10,13 @@
       "id": "5fcf",
       "text": "Going out with family",
       "day": "Saturday",
-      "completed": false
+      "completed": true
     },
     {
       "id": "9738",
       "text": "Winding up weekly report",
       "day": "Friday",
-      "completed": true
+      "completed": false
     },
     {
       "id": "af10",

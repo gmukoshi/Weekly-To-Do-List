@@ -5,6 +5,6 @@
     "start": "nodeserver.js"
   },
   "dependencies": {
-    "json-server": "0.17.3"
+    "json-server": "^0.17.3"
   }
 }
