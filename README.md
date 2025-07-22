@@ -32,9 +32,9 @@ In this mini project ,we have come up with a To-do list App that is dynamic and 
 
 ## Technologies Used
 
--HTML
--CSS
--Javascript
+- HTML
+- CSS
+- Javascript
 
 ## License
 - This project is licensed under the MIT License.
