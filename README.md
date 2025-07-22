@@ -28,7 +28,7 @@ In this mini project ,we have come up with a To-do list App that is dynamic and 
 
 ## Features
 - Implementing HTML,CSS-styling
--Impelementing Javascript basics,recognizing of events,Manipulating of the DOM and commmunicating with the server.
+- Impelementing Javascript basics,recognizing of events,Manipulating of the DOM and commmunicating with the server.
 
 ## Technologies Used
 
