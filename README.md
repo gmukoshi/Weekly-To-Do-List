@@ -12,6 +12,10 @@ In this mini project ,we have come up with a To-do list App that is dynamic and 
 - A program that Builds Accountability,since one is able to determine if he completed a task or not.
 - Adding tasks.
 
+### Live link
+
+https://weekly-to-do-list3.onrender.com
+
 ## Installation
 1. Clone the repo  
 
