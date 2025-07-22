@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=> {
-  const apiUrl = 'http://localhost:3000/';
+  const apiUrl = 'http://localhost:3000/tasks';
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const weekDiv = document.getElementById('week');
   const taskInput = document.getElementById('taskInput');
