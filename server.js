@@ -15,7 +15,7 @@ server.get('/api/status', (req, res) => {
 server.use('/api', router);
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT,() => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`JSON Server is running on port ${PORT}`);
   console.log(`API endpoints available at http://localhost:${PORT}/api`);
 });
