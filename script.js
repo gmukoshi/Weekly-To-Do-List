@@ -104,3 +104,5 @@ document.addEventListener('DOMContentLoaded', ()=> {
   // Initial load
   fetchTasks();
 });
+window.addActivity = addActivity;
+
