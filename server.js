@@ -1,15 +1,15 @@
-// server.js
-import { create, router as _router, defaults, bodyParser } from 'json-server';
-import path from 'path';
-const server = create();
-const router = _router('db.json');
-const middlewares = defaults({
-  static: './'  // Serves index.html and static files
+const jsonServer = require('json-server');
+const path = require('path');
+
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults({
+  static: './'
 });
 
 server.use(middlewares);
-server.use(bodyParser);
-server.use('/tasks', router); // So you fetch from /tasks
+server.use(jsonServer.bodyParser);
+server.use('/tasks', router);
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
