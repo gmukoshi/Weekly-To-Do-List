@@ -41,6 +41,12 @@
       "text": "Hitting the gym",
       "day": "Monday",
       "completed": false
+    },
+    {
+      "id": "8751",
+      "text": "Dancing",
+      "day": "Monday",
+      "completed": false
     }
   ]
 }
