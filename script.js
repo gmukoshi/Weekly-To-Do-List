@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=> {
-  const apiUrl = 'https://weekly-to-do-list3.onrender.com/';
+  const apiUrl = 'http://localhost:3000/tasks';
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const weekDiv = document.getElementById('week');
   const taskInput = document.getElementById('taskInput');
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     // Delete button
     const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = '✕';
+    deleteBtn.textContent = '❌';
     deleteBtn.className = 'delete';
     deleteBtn.addEventListener('click', () => {
       fetch(`${apiUrl}/${task.id}`, {

@@ -1,8 +1,8 @@
-{
-  "name": "weekly-to-do-list",
+{ 
+   "name": "weekly-to-do-list",
   "version": "1.0.0",
   "main": "server.js",
-    "scripts": {
+  "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
