@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=> {
-  const apiUrl = 'https://weekly-to-do-list3.onrender.com/tasks';
+  const apiUrl = 'https://weekly-to-do-list3.onrender.com/';
   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const weekDiv = document.getElementById('week');
   const taskInput = document.getElementById('taskInput');
