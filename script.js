@@ -1,109 +1,92 @@
-document.addEventListener('DOMContentLoaded', ()=> {
-  const apiUrl = 'https://weekly-to-do-list4.onrender.com/tasks';
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  const weekDiv = document.getElementById('week');
-  const taskInput = document.getElementById('taskInput');
-  const daySelect = document.getElementById('daySelect');
+document.addEventListener('DOMContentLoaded', () => {
+  const taskInput = document.getElementById("taskInput");
+  const daySelect = document.getElementById("daySelect");
+  const API_URL = "https://weekly-to-do-list4.onrender.com/tasks"; // ✅ Relative path for combined frontend/backend
 
-  // Render day sections
-  days.forEach(day => {
-    const dayDiv = document.createElement('div');
-    dayDiv.className = 'day';
-    dayDiv.innerHTML = `
-      <h2>${day}</h2>
-      <ul id="${day}-list"></ul>
-    `;
-    weekDiv.appendChild(dayDiv);
-  });
+  function addActivity() {
+    const taskText = taskInput.value.trim();
+    const selectedDay = daySelect.value;
 
-  // Handle Add Activity button  
-  window.addActivity = function () {
-    const text = taskInput.value.trim();
-    const day = daySelect.value;
-      
-    if (text === '') {
-      alert("Please enter an activity.");
+    if (taskText === "") {
+      alert("Please enter a task.");
       return;
     }
 
     const newTask = {
-      text,
-      day,
+      day: selectedDay,
+      text: taskText,
       completed: false
     };
 
-    fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTask)
     })
-      .then(res => res.json())
-      .then(task => {
-        renderTask(task);
-        taskInput.value = '';
-      });
-  };
+    .then(res => res.json())
+    .then(task => {
+      renderTask(task);
+      taskInput.value = "";
+    })
+    .catch(err => console.error("Failed to add task:", err));
+  }
 
-  // Add support for Enter key
-  taskInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      e.preventDefault(); // prevent form-like behavior
-      addActivity();      //  call the add function
-    }
-  });
-
-  // Fetch and render tasks from db.json
   function fetchTasks() {
-    fetch(apiUrl)
+    fetch(API_URL)
       .then(res => res.json())
-      .then(data => data.forEach(task => renderTask(task)));
+      .then(data => {
+        if (Array.isArray(data)) {
+          data.forEach(task => renderTask(task));
+        }
+      })
+      .catch(err => console.error("Failed to load tasks:", err));
   }
 
-  // Render a task into the appropriate day's list
   function renderTask(task) {
-    const list = document.getElementById(`${task.day}-list`);
-        if (!list) return;
+    const dayList = document.getElementById(task.day);
+    const li = document.createElement("li");
+    li.textContent = task.text;
+    li.style.cursor = "pointer";
 
-    const li = document.createElement('li');
-    if (task.completed) li.classList.add('completed');
+    if (task.completed) {
+      li.style.textDecoration = "line-through";
+    }
 
-    const span = document.createElement('span');
-    span.textContent = task.text;
-    span.style.flexGrow = 1;
-
-    // Toggle completion on click
-    span.addEventListener('click', () => {
-      const updated = !task.completed;
-      li.classList.toggle('completed');
-
-      fetch(`${apiUrl}/${task.id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ completed: updated })
-      }).then(() => {
-        task.completed = updated;
-      });
+    li.addEventListener("click", () => {
+      task.completed = !task.completed;
+      updateTask(task, li);
     });
 
-    // Delete button
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = '❌';
-    deleteBtn.className = 'delete';
-    deleteBtn.addEventListener('click', () => {
-      fetch(`${apiUrl}/${task.id}`, {
-        method: 'DELETE'
-      }).then(() => {
-        li.remove();
-      });
-    });
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "❌";
+    removeBtn.style.marginLeft = "10px";
+    removeBtn.onclick = (e) => {
+      e.stopPropagation();
+      deleteTask(task.id, li);
+    };
 
-    li.appendChild(span);
-    li.appendChild(deleteBtn);
-    list.appendChild(li);
+    li.appendChild(removeBtn);
+    dayList.appendChild(li);
   }
-  // Initial load
+
+  function updateTask(task, li) {
+    fetch(`${API_URL}/${task.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ completed: task.completed })
+    })
+    .then(() => {
+      li.style.textDecoration = task.completed ? "line-through" : "none";
+    })
+    .catch(err => console.error("Failed to update task:", err));
+  }
+
+  function deleteTask(id, li) {
+    fetch(`${API_URL}/${id}`, { method: "DELETE" })
+      .then(() => li.remove())
+      .catch(err => console.error("Failed to delete task:", err));
+  }
+
   window.addActivity = addActivity;
   fetchTasks();
 });
-
-
