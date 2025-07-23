@@ -3,13 +3,13 @@ const path = require('path');
 
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults({ static: './' });
+const middlewares = jsonServer.defaults({ static: './' }); // Serve index.html
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
-server.use('/tasks', router); // tasks endpoint
+server.use('/tasks', router); // Your API endpoint
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`JSON Server is running on port ${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });

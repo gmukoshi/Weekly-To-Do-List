@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
     list.appendChild(li);
   }
   // Initial load
+  window.addActivity = addActivity;
   fetchTasks();
 });
-window.addActivity = addActivity;
+
 
