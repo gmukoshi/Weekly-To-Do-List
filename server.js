@@ -7,7 +7,7 @@ const middlewares = jsonServer.defaults({ static: './' }); // Serve index.html
 
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
-server.use('/tasks', router); // Your API endpoint
+server.use('https://weekly-to-do-list4.onrender.com/tasks', router); // Your API endpoint
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
